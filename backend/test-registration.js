@@ -9,6 +9,9 @@ async function testRegistration() {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB');
 
+
+    
+
     // Create a test user
     const testEmail = `test_${Date.now()}@example.com`;
     

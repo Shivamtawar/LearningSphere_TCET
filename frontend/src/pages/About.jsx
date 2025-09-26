@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { 
-  GraduationCap, 
-  Users, 
-  Target, 
-  Heart, 
-  Award, 
+import {
+  GraduationCap,
+  Users,
+  Target,
+  Heart,
+  Award,
   BookOpen,
   Star,
   ArrowRight,
@@ -46,33 +46,27 @@ const About = () => {
 
   const team = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO & Co-Founder',
+      name: 'Shivam Tawar',
+      role: 'Team Prometheus',
       image: '/api/placeholder/150/150',
-      bio: 'Former education director with 15+ years experience in personalized learning.',
-      linkedin: '#'
+      bio: 'Leads the team with a vision',
+      linkedin: 'https://www.linkedin.com/in/shivam-tawar-b83111324/'
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO & Co-Founder',
+      name: 'Piyush Yadav',
+      role: 'Team Prometheus',
       image: '/api/placeholder/150/150',
-      bio: 'Tech entrepreneur passionate about using AI to enhance education.',
-      linkedin: '#'
+      bio: 'Brainstorms features to bring them into reality.',
+      linkedin: 'https://www.linkedin.com/in/piyush-yadav-23b8ba2a3/'
     },
     {
-      name: 'Dr. Emily Rodriguez',
-      role: 'Head of Education',
+      name: 'Rina Ghule',
+      role: 'Team Prometheus',
       image: '/api/placeholder/150/150',
-      bio: 'PhD in Educational Psychology, specializing in adaptive learning methods.',
-      linkedin: '#'
+      bio: 'Designs the best out for us.',
+      linkedin: 'https://www.linkedin.com/in/rina-ghule-b07141364/'
     },
-    {
-      name: 'David Kim',
-      role: 'Head of Product',
-      image: '/api/placeholder/150/150',
-      bio: 'Product strategist focused on creating intuitive learning experiences.',
-      linkedin: '#'
-    }
+
   ];
 
   const achievements = [
@@ -114,7 +108,7 @@ const About = () => {
           <div className="flex space-x-8">
             {[
               { key: 'mission', label: 'Our Mission' },
-              { key: 'story', label: 'Our Story' },
+
               { key: 'values', label: 'Values' },
               { key: 'team', label: 'Team' },
               { key: 'achievements', label: 'Achievements' }
@@ -122,11 +116,10 @@ const About = () => {
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
-                  activeTab === tab.key
+                className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${activeTab === tab.key
                     ? 'border-blue-600 text-blue-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                }`}
+                  }`}
               >
                 {tab.label}
               </button>
@@ -142,8 +135,8 @@ const About = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                To democratize quality education by connecting passionate learners with expert mentors, 
-                creating personalized learning experiences that unlock human potential regardless of 
+                To democratize quality education by connecting passionate learners with expert mentors,
+                creating personalized learning experiences that unlock human potential regardless of
                 geographical or economic barriers.
               </p>
             </div>
@@ -173,7 +166,7 @@ const About = () => {
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Impact</h3>
                 <p className="text-gray-700 mb-6">
-                  Since 2022, we've helped thousands of students achieve their learning goals through 
+                  Since 2022, we've helped thousands of students achieve their learning goals through
                   our innovative matching algorithm and supportive community.
                 </p>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center space-x-2 transition-colors">
@@ -185,83 +178,6 @@ const About = () => {
           </div>
         )}
 
-        {/* Story Tab */}
-        {activeTab === 'story' && (
-          <div className="space-y-12">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                From a college dorm room idea to a global education platform
-              </p>
-            </div>
-
-            <div className="space-y-12">
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <BookOpen className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">The Beginning (2022)</h3>
-                    <p className="text-gray-700">
-                      Founded by two college students who struggled to find quality tutors for advanced subjects. 
-                      They realized that great mentors existed everywhere, but there was no easy way to connect 
-                      with them. This sparked the idea for LearingSphere.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-purple-100 p-3 rounded-full">
-                    <Users className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Early Growth (2023)</h3>
-                    <p className="text-gray-700">
-                      Launched our MVP with 50 tutors and 200 students. Word spread quickly through universities, 
-                      and we realized we had tapped into a universal need. Students loved the personalized approach, 
-                      and tutors appreciated the flexible platform.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <Target className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Scaling Impact (2024)</h3>
-                    <p className="text-gray-700">
-                      Expanded internationally and introduced AI-powered matching. Partnered with universities 
-                      and corporations for professional development programs. Our community grew to over 10,000 
-                      active learners and 2,500 expert mentors.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-white/20 p-3 rounded-full">
-                    <Star className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">The Future (2025+)</h3>
-                    <p className="text-gray-100">
-                      We're building the world's most comprehensive personalized learning ecosystem. 
-                      Our vision: every person having access to the perfect mentor for their learning journey, 
-                      supported by cutting-edge technology and a thriving global community.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Values Tab */}
         {activeTab === 'values' && (
@@ -301,7 +217,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
                   <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -312,9 +228,14 @@ const About = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
                   <p className="text-blue-600 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                  <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm hover:underline"
+                  >
                     Connect on LinkedIn
-                  </button>
+                  </a>
                 </div>
               ))}
             </div>
@@ -366,3 +287,4 @@ const About = () => {
 };
 
 export default About;
+
